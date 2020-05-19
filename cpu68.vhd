@@ -753,7 +753,7 @@ begin
 	   end if;
   	 when alu_sec =>
       cc_out(CBIT) <= '1';
-  	 when alu_clc =>
+  	 when alu_clc | alu_st8 =>
       cc_out(CBIT) <= '0';
     when alu_tap =>
       cc_out(CBIT) <= left(CBIT);
